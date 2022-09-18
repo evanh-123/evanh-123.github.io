@@ -8,7 +8,6 @@ const GreetingObserver = new IntersectionObserver((entries) => {
     });
 })
 
-
 const Greeting = document.querySelectorAll('.hidden');
 Greeting.forEach((element) => {
     GreetingObserver.observe(element);
@@ -17,6 +16,7 @@ Greeting.forEach((element) => {
 python = document.getElementById('python');
 javascript = document.getElementById('javascript');
 cs = document.getElementById('cs');
+pythonh1 = document.getElementById('pythonh1');
 
 var myScrollFunc = function() {
     var y = window.scrollY;
@@ -32,3 +32,10 @@ var myScrollFunc = function() {
   };
   
   window.addEventListener("scroll", myScrollFunc);
+
+python.addEventListener('click', () => {
+    cs.className = "cs-hide";
+    javascript.classname = "js-hide";
+    python.style.transform = "translateX(375px)";
+    pythonh1.className = "projmain";
+})
