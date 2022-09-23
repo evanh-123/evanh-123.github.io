@@ -20,8 +20,6 @@ Greeting.forEach((element) => {
 python = document.getElementById('python');
 javascript = document.getElementById('javascript');
 cs = document.getElementById('cs');
-pythonh1 = document.getElementById('pythonh1');
-
 var myScrollFunc = function() {
     var y = window.scrollY;
     if (y > 20) {
@@ -35,11 +33,47 @@ var myScrollFunc = function() {
     }
   };
   
-  window.addEventListener("scroll", myScrollFunc);
+window.addEventListener("scroll", myScrollFunc);
 
-python.addEventListener('click', () => {
-    cs.className = "cs-hide";
-    javascript.classname = "js-hide";
-    python.style.transform = "translateX(375px)";
-    pythonh1.className = "projmain";
-})
+var pythonclick = function() {
+    var pyh1 = document.getElementById('pyh1');
+    var pylist = document.getElementById('pylist');
+    pyh1.classList.toggle("proj-text-show");
+    var pyh4 = document.getElementById('pyh4');
+    var pyh5 = document.getElementById('pyh5');
+    pyh4.classList.toggle("header-hide");
+    pyh5.classList.toggle("header-hide");
+    pylist.classList.toggle("list-items-show");
+    
+}
+
+python.addEventListener("click", pythonclick); 
+
+
+var javascriptclick = function() {
+    var jsh1 = document.getElementById('jsh1');
+    var jslist = document.getElementById('jslist');
+    jsh1.classList.toggle("proj-text-show");
+    var jsh4 = document.getElementById('jsh4');
+    var jsh5 = document.getElementById('jsh5');
+    jsh4.classList.toggle("header-hide");
+    jsh5.classList.toggle("header-hide");
+    jslist.classList.toggle("list-items-show");
+        
+}
+
+javascript.addEventListener("click", javascriptclick);
+
+var csclick = function() {
+    var csh1 = document.getElementById('csh1');
+    var cslist = document.getElementById('cslist');
+    csh1.classList.toggle("proj-text-show");
+    var csh4 = document.getElementById('csh4');
+    var csh5 = document.getElementById('csh5');
+    csh4.classList.toggle("header-hide");
+    csh5.classList.toggle("header-hide");
+    cslist.classList.toggle("list-items-show");
+        
+}
+
+cs.addEventListener("click", csclick);
